@@ -1,0 +1,12 @@
+body{cursor: url('http://camnpr.com/upload/2013/8//hand_white.cur'),auto;}
+.bar-top{top:0;}
+a{text-decoration: none;}
+.xmp-border{font-family:'Helvetica';  border-bottom:1px solid #005bac;padding-bottom:30px;font-size: 12px;margin-bottom: 10px;color:#fff;background-color: #888;}
+/*ionic 主页 home.html*/
+.button.idpro-button-full {
+  height: 120px;
+}
+.button.idpro-button-full.button-full{margin:0;}
+i.icon-right.idpro-icon-large {
+  font-size: 40px;
+}
