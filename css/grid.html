@@ -1,0 +1,229 @@
+<ion-view title="网格/Grid" on-swipe-up="warn_up()" on-swipe-down="warn_down()">
+  
+  <ion-content class="bar-top">
+    <div class="bar bar-header bar-dark">
+      <h1 class="title">{{nav_header}}</h1>
+    </div>
+    <br/><br/>
+
+	<h5>网格布局</h5>
+	<div class="row">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+<xmp class="xmp-border ">
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+</xmp>
+
+	<h5>Grid: Explicit Column Sizes</h5>
+	<div class="row">
+	  <div class="col col-50">.col.col-50</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col col-75">.col.col-75</div>
+	  <div class="col">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col">.col</div>
+	  <div class="col col-75">.col.col-75</div>
+	</div>
+
+	<div class="row">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+<xmp class="xmp-border ">
+<div class="row">
+  <div class="col col-50">.col.col-50</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-75">.col.col-75</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col col-75">.col.col-75</div>
+</div>
+
+<div class="row">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+
+(Explicit Column Percentage Classnames)
+.col-10	10%
+.col-20	20%
+.col-25	25%
+.col-33	33.3333%
+.col-50	50%
+.col-67	66.6666%
+.col-75	75%
+.col-80	80%
+.col-90	90%
+</xmp>
+
+	<h5>Grid: Offset Columns</h5>
+	<div class="row">
+	  <div class="col col-33 col-offset-33">.col</div>
+	  <div class="col">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col col-33">.col</div>
+	  <div class="col col-33 col-offset-33">.col</div>
+	</div>
+
+	<div class="row">
+	  <div class="col col-33 col-offset-67">.col</div>
+	</div>
+<xmp class="xmp-border ">
+<div class="row">
+  <div class="col col-33 col-offset-33">.col</div>
+  <div class="col">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-33">.col</div>
+  <div class="col col-33 col-offset-33">.col</div>
+</div>
+
+<div class="row">
+  <div class="col col-33 col-offset-67">.col</div>
+</div>
+
+(Offset Column Percentage Classnames)
+.col-offset-10	10%
+.col-offset-20	20%
+.col-offset-25	25%
+.col-offset-33	33.3333%
+.col-offset-50	50%
+.col-offset-67	66.6666%
+.col-offset-75	75%
+.col-offset-80	80%
+.col-offset-90	90%
+</xmp>
+	
+	<h5>Grid: Vertically Align Columns</h5>
+	<div class="row">
+  	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">1<br>2<br>3<br>4</div>
+	</div>
+
+	<div class="row">
+	  <div class="col col-top">.col</div>
+	  <div class="col col-center">.col</div>
+	  <div class="col col-bottom">.col</div>
+	  <div class="col">1<br>2<br>3<br>4</div>
+	</div>
+
+	<div class="row row-top">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">1<br>2<br>3<br>4</div>
+	</div>
+
+	<div class="row row-center">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">1<br>2<br>3<br>4</div>
+	</div>
+
+	<div class="row row-bottom">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">1<br>2<br>3<br>4</div>
+	</div>
+<xmp class="xmp-border ">
+<div class="row">
+	  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row">
+  <div class="col col-top">.col</div>
+  <div class="col col-center">.col</div>
+  <div class="col col-bottom">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-top">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-center">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+
+<div class="row row-bottom">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">1<br>2<br>3<br>4</div>
+</div>
+</xmp>
+
+	<h5>响应式 Responsive Grid</h5>
+	<div class="row responsive-sm">
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	  <div class="col">.col</div>
+	</div>
+<xmp class="xmp-border ">
+<div class="row responsive-sm">
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+  <div class="col">.col</div>
+</div>
+
+(Responsive Class)
+.responsive-sm
+.responsive-md
+.responsive-lg
+</xmp>
+
+	<h5></h5>
+	
+<xmp class="xmp-border ">
+
+</xmp>
+
+	<h5></h5>
+	
+<xmp class="xmp-border ">
+
+</xmp>
+  </ion-content>
+
+</ion-view>
