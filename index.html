@@ -1,0 +1,145 @@
+<html ng-app="kuwuya">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name="Keywords" contect="关键字"/>
+    <meta name=description content="描述 简介">
+    <meta name=format-detection content="telephone=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- Web App Capable -->
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <!-- Change Status Bar -->
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+
+    <link rel=apple-touch-icon href=lib/img/icon/ios/icon-57.png>
+    <link rel=apple-touch-icon sizes=72x72 href=lib/img/icon/ios/icon-72.png>
+    <link rel=apple-touch-icon sizes=114x114 href=lib/img/icon/ios/icon-114.png>
+    <title>ionic demo</title>
+
+    <script src="./lib/js/ionic.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./lib/css/ionic.min.css">
+    <link href="./lib/css/style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainCtrl">
+
+    <ion-nav-view></ion-nav-view>
+
+    <script id="templates/event-menu.html" type="text/ng-template">
+      <ion-side-menus enable-menu-with-back-views="false">
+        <ion-side-menu-content>
+          <ion-nav-bar ng-hide="bar_hide" class="bar-positive"> <!-- 顶部导航 下滑消失 上滑显示-->
+            <ion-nav-back-button>返回</ion-nav-back-button> <!--顶部导航 左部 back按钮-->
+            <ion-nav-buttons side="right">
+              <!--顶部导航 右部 菜单按钮-->
+              <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+            </ion-nav-buttons>
+          </ion-nav-bar>
+          <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content> 
+
+        <ion-side-menu side="right">
+          <ion-header-bar class="bar-positive">
+            <h1 class="title"><i class="icon ion-social-html5"></i> 快速导航</h1>
+          </ion-header-bar>
+          <ion-content>
+            <ul class="list">
+              <a href="#/event/home" class="item" menu-close><i class="icon ion-home"></i> ionic手册</a>
+              <li class="item item-divider">ionic CSS</li>
+              <a href="#/event/css/header" class="item" menu-close><i class="icon ion-social-sass"></i> 导航栏/Header</a>
+              <a href="#/event/css/content" class="item" menu-close><i class="icon ion-social-sass"></i> 内容/Content</a>
+              <a href="#/event/css/footer" class="item" menu-close><i class="icon ion-social-sass"></i> 底部/Footer</a>
+              <a href="#/event/css/buttons" class="item" menu-close><i class="icon ion-social-sass"></i> 按钮/Buttons</a>
+              <a href="#/event/css/list" class="item" menu-close><i class="icon ion-social-sass"></i> 列表/List</a>
+              <a href="#/event/css/cards" class="item" menu-close><i class="icon ion-social-sass"></i> 布局/Cards</a>
+              <a href="#/event/css/forms" class="item" menu-close><i class="icon ion-social-sass"></i> 表单/Forms</a>
+              <a href="#/event/css/tabs" class="item" menu-close><i class="icon ion-social-sass"></i> 切换标签/Tabs</a>
+              <a href="#/event/css/grid" class="item" menu-close><i class="icon ion-social-sass"></i> 网格布局/Grid</a>
+              <a href="#/event/css/utility" class="item" menu-close><i class="icon ion-social-sass"></i> 实用功能/Utility</a>
+              <li class="item item-divider">ionic JS</li>
+              <a href="#/event/js/ion-header-bar" class="item" menu-close><i class="icon ion-social-javascript"></i> ion-header-bar</a>
+              <a href="#/event/js/content" class="item" menu-close><i class="icon ion-social-javascript"></i> 内容/Content</a>
+              <a href="#/event/js/footer" class="item" menu-close><i class="icon ion-social-javascript"></i> 页脚/Footer</a>
+              <a href="#/event/js/buttons" class="item" menu-close><i class="icon ion-social-javascript"></i> 按钮/Buttons</a>
+              <a href="#/event/js/list" class="item" menu-close><i class="icon ion-social-javascript"></i> 列表/List</a>
+              <a href="#/event/js/forms" class="item" menu-close><i class="icon ion-social-javascript"></i> 表单/Forms</a>
+              <a href="#/event/js/tabs" class="item" menu-close><i class="icon ion-social-javascript"></i> 切换标签/Tabs</a>
+              <a href="#/event/js/grid" class="item" menu-close><i class="icon ion-social-javascript"></i> 网格布局/Grid</a>
+              <a href="#/event/js/utility" class="item" menu-close><i class="icon ion-social-javascript"></i> 实用功能/Utility</a>
+            </ul>
+          </ion-content>
+          </ion-side-menu>
+        </ion-side-menus>
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+      <ion-view view-title="ionic手册" on-swipe-down="warn_down()">
+        <ion-content class="bar-top">
+        <br/><br/>
+          <div class="row">
+            <div class="col col-50">
+              <a href="#/event/css">
+                <button class="button button-large button-full button-dark idpro-button-full ">
+                  <i class="idpro-icon-large icon-right ion-home"></i><br>
+                  Ionic CSS
+                </button>
+              </a>
+            </div>
+            <div class="col col-50">
+              <a href="#/event/ionicons">
+                <button class="button button-large button-full button-energized idpro-button-full">
+                  <i class="idpro-icon-large icon-right ion-search"></i><br>
+                  ionicons
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <a href="#/event/js">
+                <button class="button button-large button-full button-royal idpro-button-full">
+                  <i class="idpro-icon-large icon-right ion-log-in"></i><br>
+                  Ionic JS
+                </button>
+              </a>
+            </div>
+            <div class="col col-50">
+              <a href="#/event/case">
+                <button class="button button-large button-full button-assertive idpro-button-full">
+                  <i class="idpro-icon-large icon-right ion-log-out"></i><br>
+                  Ionic 案例
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <a href="#/event/about">
+                <button class="button button-large button-full button-balanced idpro-button-full">
+                  <i class="idpro-icon-large icon-right ion-location"></i><br>
+                  关于我
+                </button>
+              </a>
+            </div>
+            <div class="col col-50">
+              <a href="#/event/moeny">
+                <button class="button button-large button-full button-positive idpro-button-full">
+                  <i class="idpro-icon-large icon-right ion-beer"></i><br>
+                  请客吃饭
+                </button>
+              </a>
+            </div>
+          </div>
+        </ion-content>
+      </ion-view>
+    </script>
+
+<!-- your app's js -->
+<script src="./lib/js/app.js"></script>
+
+<!-- controllers -->
+<script src="./lib/js/controllers/SplashCtrl.js"></script>
+<script src="./lib/js/controllers/AuthCtrl.js"></script>
+  </body>
+</html>
