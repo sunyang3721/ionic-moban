@@ -10,3 +10,7 @@ a{text-decoration: none;}
 i.icon-right.idpro-icon-large {
   font-size: 40px;
 }
+
+/*ionicone 图标*/
+.font_big{margin-left: 2px;border-left: 5px solid #808080;}
+.font_big li{font-size: 24px; color:#005bac; float: left;width:20%;padding-left: 7%;}
